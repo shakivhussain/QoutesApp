@@ -7,13 +7,11 @@ import com.shakiv.husain.qoutesapp.model.Qoute
 
 
 @Composable
-fun QouteList(qouteList: Array<Qoute>, onClick: () -> Unit) {
+fun QouteList(qouteList: Array<Qoute>, onClick: (qoute: Qoute) -> Unit) {
 
     LazyColumn(content = {
         items(qouteList) { qoute ->
-            QouteListItem(qoute = qoute) {
-                onClick()
-            }
+            QouteListItem(qoute = qoute, onClick)
         }
     })
 }

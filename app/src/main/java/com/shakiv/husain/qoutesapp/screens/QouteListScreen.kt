@@ -15,7 +15,7 @@ import com.shakiv.husain.qoutesapp.R
 import com.shakiv.husain.qoutesapp.model.Qoute
 
 @Composable
-fun QouteListScreen(quteList: Array<Qoute>, onClick: () -> Unit) {
+fun QouteListScreen(quteList: Array<Qoute>, onClick: (qoute: Qoute) -> Unit) {
 
     Column {
         Text(
@@ -27,8 +27,6 @@ fun QouteListScreen(quteList: Array<Qoute>, onClick: () -> Unit) {
             style = MaterialTheme.typography.headlineSmall,
             fontFamily = FontFamily(Font(R.font.bold))
         )
-        QouteList(qouteList = quteList) {
-            onClick()
-        }
+        QouteList(qouteList = quteList, onClick)
     }
 }

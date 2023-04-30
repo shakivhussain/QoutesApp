@@ -6,12 +6,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.shakiv.husain.qoutesapp.screens.Pages
+import com.shakiv.husain.qoutesapp.screens.QouteDetails
 import com.shakiv.husain.qoutesapp.screens.QouteListScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -36,19 +37,28 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun App() {
 
-    if (DataManager.isDataLoaded.value) {
-        QouteListScreen(quteList = DataManager.qouteList) {
-            Log.d("TAGApp", "App: ")
+
+    if (DataManager.currentPage.value==Pages.LISTING){
+        if (DataManager.isDataLoaded.value) {
+            QouteListScreen(quteList = DataManager.qouteList) {
+                DataManager.switchPages(it)
+                Log.d("TAGApp", "App: $it")
+            }
+        } else {
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier.fillMaxSize(1F)
+            ) {
+                Text(
+                    text = "Loading...",
+                    style = MaterialTheme.typography.titleMedium)
+            }
         }
-    } else {
-        Box(
-            contentAlignment = Alignment.Center,
-            modifier = Modifier.fillMaxSize(1F)
-        ) {
-            Text(
-                text = "Loading...",
-                style = MaterialTheme.typography.titleMedium)
+    }else{
+        DataManager.currenQoute?.let {qoute->
+            QouteDetails(qoute = qoute)
         }
     }
+
 
 }

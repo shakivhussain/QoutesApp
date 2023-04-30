@@ -1,5 +1,6 @@
 package com.shakiv.husain.qoutesapp.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -24,6 +25,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import com.shakiv.husain.qoutesapp.DataManager
 import com.shakiv.husain.qoutesapp.R
 import com.shakiv.husain.qoutesapp.model.Qoute
 
@@ -31,7 +33,9 @@ import com.shakiv.husain.qoutesapp.model.Qoute
 @Composable
 fun QouteDetails(qoute: Qoute) {
 
-
+    BackHandler {
+        DataManager.switchPages(null)
+    }
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier

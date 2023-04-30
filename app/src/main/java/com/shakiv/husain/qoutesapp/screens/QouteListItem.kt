@@ -29,12 +29,12 @@ import com.shakiv.husain.qoutesapp.model.Qoute
 
 
 @Composable
-fun QouteListItem(qoute: Qoute, onClick: () -> Unit) {
+fun QouteListItem(qoute: Qoute, onClick: (qoute:Qoute) -> Unit) {
     Card(
         elevation = CardDefaults.cardElevation(8.dp),
         modifier = Modifier
             .clickable {
-                onClick()
+                onClick(qoute)
             }
             .padding(10.dp)
     ) {
