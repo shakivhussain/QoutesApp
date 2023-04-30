@@ -19,7 +19,7 @@ fun QouteListScreen(quteList: Array<Qoute>, onClick: (qoute: Qoute) -> Unit) {
 
     Column {
         Text(
-            text = "Qoute Application",
+            text = "Quote Application",
             textAlign = TextAlign.Center,
             modifier = Modifier
                 .padding(16.dp)
