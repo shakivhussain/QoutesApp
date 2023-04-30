@@ -1,4 +1,4 @@
-package com.shakiv.husain.qoutesapp.screens
+package com.shakiv.husain.quotesapp.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -25,7 +25,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.shakiv.husain.qoutesapp.R
-import com.shakiv.husain.qoutesapp.model.Quote
+import com.shakiv.husain.quotesapp.model.Quote
 
 
 @Composable

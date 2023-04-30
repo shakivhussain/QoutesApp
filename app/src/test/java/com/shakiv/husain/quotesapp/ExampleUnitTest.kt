@@ -1,4 +1,4 @@
-package com.shakiv.husain.qoutesapp
+package com.shakiv.husain.quotesapp
 
 import org.junit.Test
 
