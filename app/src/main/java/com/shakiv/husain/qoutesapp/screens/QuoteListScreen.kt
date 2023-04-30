@@ -27,6 +27,6 @@ fun QuoteListScreen(quteList: Array<Quote>, onClick: (quote: Quote) -> Unit) {
             style = MaterialTheme.typography.headlineSmall,
             fontFamily = FontFamily(Font(R.font.bold))
         )
-        QouteList(quoteList = quteList, onClick)
+        QuoteList(quoteList = quteList, onClick)
     }
 }

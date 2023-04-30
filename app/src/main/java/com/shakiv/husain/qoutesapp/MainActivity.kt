@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.shakiv.husain.qoutesapp.screens.Pages
-import com.shakiv.husain.qoutesapp.screens.QouteDetails
+import com.shakiv.husain.qoutesapp.screens.QuoteDetails
 import com.shakiv.husain.qoutesapp.screens.QuoteListScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -55,8 +55,8 @@ fun App() {
             }
         }
     }else{
-        DataManager.currenQuote?.let { qoute->
-            QouteDetails(quote = qoute)
+        DataManager.currenQuote?.let { quote->
+            QuoteDetails(quote = quote)
         }
     }
 

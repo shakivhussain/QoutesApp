@@ -29,7 +29,7 @@ import com.shakiv.husain.qoutesapp.model.Quote
 
 
 @Composable
-fun QouteListItem(quote: Quote, onClick: (quote:Quote) -> Unit) {
+fun QuoteListItem(quote: Quote, onClick: (quote:Quote) -> Unit) {
     Card(
         elevation = CardDefaults.cardElevation(8.dp),
         modifier = Modifier

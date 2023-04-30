@@ -31,7 +31,7 @@ import com.shakiv.husain.qoutesapp.model.Quote
 
 
 @Composable
-fun QouteDetails(quote: Quote) {
+fun QuoteDetails(quote: Quote) {
 
     BackHandler {
         DataManager.switchPages(null)
