@@ -1,9 +1,9 @@
-package com.shakiv.husain.qoutesapp.screens
+package com.shakiv.husain.quotesapp.screens
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
-import com.shakiv.husain.qoutesapp.model.Quote
+import com.shakiv.husain.quotesapp.model.Quote
 
 
 @Composable

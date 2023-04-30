@@ -1,4 +1,4 @@
-package com.shakiv.husain.qoutesapp.screens
+package com.shakiv.husain.quotesapp.screens
 
 enum class Pages {
     LISTING,

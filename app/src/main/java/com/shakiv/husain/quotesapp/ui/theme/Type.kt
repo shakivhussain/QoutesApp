@@ -1,4 +1,4 @@
-package com.shakiv.husain.qoutesapp.ui.theme
+package com.shakiv.husain.quotesapp.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

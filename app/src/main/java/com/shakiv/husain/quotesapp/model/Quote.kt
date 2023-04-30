@@ -1,4 +1,4 @@
-package com.shakiv.husain.qoutesapp.model
+package com.shakiv.husain.quotesapp.model
 
 data class Quote(
     val quote:String,

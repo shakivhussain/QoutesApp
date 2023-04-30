@@ -1,10 +1,10 @@
-package com.shakiv.husain.qoutesapp
+package com.shakiv.husain.quotesapp
 
 import android.content.Context
 import androidx.compose.runtime.mutableStateOf
 import com.google.gson.Gson
-import com.shakiv.husain.qoutesapp.model.Quote
-import com.shakiv.husain.qoutesapp.screens.Pages
+import com.shakiv.husain.quotesapp.model.Quote
+import com.shakiv.husain.quotesapp.screens.Pages
 
 object DataManager {
 
