@@ -27,11 +27,11 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import com.shakiv.husain.qoutesapp.DataManager
 import com.shakiv.husain.qoutesapp.R
-import com.shakiv.husain.qoutesapp.model.Qoute
+import com.shakiv.husain.qoutesapp.model.Quote
 
 
 @Composable
-fun QouteDetails(qoute: Qoute) {
+fun QouteDetails(quote: Quote) {
 
     BackHandler {
         DataManager.switchPages(null)
@@ -68,7 +68,7 @@ fun QouteDetails(qoute: Qoute) {
                 )
 
                 Text(
-                    text = qoute.quote,
+                    text = quote.quote,
                     fontFamily = FontFamily(Font(R.font.regular)),
                     style = MaterialTheme.typography.titleSmall
                 )
@@ -77,7 +77,7 @@ fun QouteDetails(qoute: Qoute) {
                 Spacer(modifier = Modifier.height(16.dp))
 
                 Text(
-                    text = qoute.author,
+                    text = quote.author,
                     fontFamily = FontFamily(Font(R.font.regular)),
                     style = MaterialTheme.typography.bodySmall
                 )

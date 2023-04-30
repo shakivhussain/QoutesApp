@@ -25,16 +25,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.shakiv.husain.qoutesapp.R
-import com.shakiv.husain.qoutesapp.model.Qoute
+import com.shakiv.husain.qoutesapp.model.Quote
 
 
 @Composable
-fun QouteListItem(qoute: Qoute, onClick: (qoute:Qoute) -> Unit) {
+fun QouteListItem(quote: Quote, onClick: (quote:Quote) -> Unit) {
     Card(
         elevation = CardDefaults.cardElevation(8.dp),
         modifier = Modifier
             .clickable {
-                onClick(qoute)
+                onClick(quote)
             }
             .padding(10.dp)
     ) {
@@ -62,7 +62,7 @@ fun QouteListItem(qoute: Qoute, onClick: (qoute:Qoute) -> Unit) {
             Column(modifier = Modifier.weight(1F)) {
 
                 Text(
-                    text = qoute.quote,
+                    text = quote.quote,
                     style = MaterialTheme.typography.titleSmall,
                     modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 4.dp)
                 )
@@ -75,7 +75,7 @@ fun QouteListItem(qoute: Qoute, onClick: (qoute:Qoute) -> Unit) {
                 )
 
                 Text(
-                    text = qoute.author,
+                    text = quote.author,
                     style = MaterialTheme.typography.bodySmall,
                     fontWeight = FontWeight.Thin,
                     modifier = Modifier.padding(top = 4.dp)

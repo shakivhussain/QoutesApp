@@ -13,7 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.shakiv.husain.qoutesapp.screens.Pages
 import com.shakiv.husain.qoutesapp.screens.QouteDetails
-import com.shakiv.husain.qoutesapp.screens.QouteListScreen
+import com.shakiv.husain.qoutesapp.screens.QuoteListScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -40,7 +40,7 @@ fun App() {
 
     if (DataManager.currentPage.value==Pages.LISTING){
         if (DataManager.isDataLoaded.value) {
-            QouteListScreen(quteList = DataManager.qouteList) {
+            QuoteListScreen(quteList = DataManager.quoteList) {
                 DataManager.switchPages(it)
                 Log.d("TAGApp", "App: $it")
             }
@@ -55,8 +55,8 @@ fun App() {
             }
         }
     }else{
-        DataManager.currenQoute?.let {qoute->
-            QouteDetails(qoute = qoute)
+        DataManager.currenQuote?.let { qoute->
+            QouteDetails(quote = qoute)
         }
     }
 

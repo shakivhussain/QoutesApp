@@ -12,10 +12,10 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.shakiv.husain.qoutesapp.R
-import com.shakiv.husain.qoutesapp.model.Qoute
+import com.shakiv.husain.qoutesapp.model.Quote
 
 @Composable
-fun QouteListScreen(quteList: Array<Qoute>, onClick: (qoute: Qoute) -> Unit) {
+fun QuoteListScreen(quteList: Array<Quote>, onClick: (quote: Quote) -> Unit) {
 
     Column {
         Text(
@@ -27,6 +27,6 @@ fun QouteListScreen(quteList: Array<Qoute>, onClick: (qoute: Qoute) -> Unit) {
             style = MaterialTheme.typography.headlineSmall,
             fontFamily = FontFamily(Font(R.font.bold))
         )
-        QouteList(qouteList = quteList, onClick)
+        QouteList(quoteList = quteList, onClick)
     }
 }
