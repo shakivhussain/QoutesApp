@@ -10,7 +10,6 @@ object DataManager {
 
     var quoteList = emptyArray<Quote>()
     var isDataLoaded = mutableStateOf(false)
-
     var currentPage = mutableStateOf(Pages.LISTING)
     var currenQuote : Quote?=null
 
@@ -21,7 +20,6 @@ object DataManager {
         quoteList = gson.fromJson(jsonString, Array<Quote>::class.java)
         isDataLoaded.value = true
     }
-
 
     fun switchPages(quote: Quote?) {
         if (currentPage.value == Pages.LISTING) {
