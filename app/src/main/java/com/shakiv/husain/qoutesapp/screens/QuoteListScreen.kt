@@ -1,4 +1,4 @@
-package com.shakiv.husain.quotesapp.screens
+package com.shakiv.husain.qoutesapp.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -12,7 +12,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.shakiv.husain.qoutesapp.R
-import com.shakiv.husain.quotesapp.model.Quote
+import com.shakiv.husain.qoutesapp.model.Quote
 
 @Composable
 fun QuoteListScreen(quteList: Array<Quote>, onClick: (quote: Quote) -> Unit) {

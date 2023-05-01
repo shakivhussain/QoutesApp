@@ -1,4 +1,4 @@
-package com.shakiv.husain.quotesapp
+package com.shakiv.husain.qoutesapp
 
 import android.os.Bundle
 import android.util.Log
@@ -11,9 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.shakiv.husain.quotesapp.screens.Pages
-import com.shakiv.husain.quotesapp.screens.QuoteDetails
-import com.shakiv.husain.quotesapp.screens.QuoteListScreen
+import com.shakiv.husain.qoutesapp.screens.Pages
+import com.shakiv.husain.qoutesapp.screens.QuoteDetails
+import com.shakiv.husain.qoutesapp.screens.QuoteListScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -40,6 +40,10 @@ fun App() {
 
     if (DataManager.currentPage.value==Pages.LISTING){
         if (DataManager.isDataLoaded.value) {
+
+            Log.d("TAGApp", "App: ${DataManager.quoteList}")
+
+            return
             QuoteListScreen(quteList = DataManager.quoteList) {
                 DataManager.switchPages(it)
                 Log.d("TAGApp", "App: $it")

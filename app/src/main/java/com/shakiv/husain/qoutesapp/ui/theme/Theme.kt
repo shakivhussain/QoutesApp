@@ -1,4 +1,4 @@
-package com.shakiv.husain.quotesapp.ui.theme
+package com.shakiv.husain.qoutesapp.ui.theme
 
 import android.app.Activity
 import android.os.Build

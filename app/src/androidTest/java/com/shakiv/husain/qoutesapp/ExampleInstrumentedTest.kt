@@ -1,4 +1,4 @@
-package com.shakiv.husain.quotesapp
+package com.shakiv.husain.qoutesapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
