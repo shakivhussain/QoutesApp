@@ -41,10 +41,7 @@ fun QuoteListItem(quote: Quote, onClick: (quote:Quote) -> Unit) {
 
         Row(
             modifier = Modifier.padding(16.dp),
-
             ) {
-
-
             Image(
 //                imageVector = Icons.Outlined.FormatQuote,
                 painter = painterResource(id = R.drawable.ic_quote),
@@ -81,11 +78,7 @@ fun QuoteListItem(quote: Quote, onClick: (quote:Quote) -> Unit) {
                     modifier = Modifier.padding(top = 4.dp)
                 )
             }
-
         }
-
-
     }
-
 }
 

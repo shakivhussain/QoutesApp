@@ -40,10 +40,8 @@ fun App() {
 
     if (DataManager.currentPage.value==Pages.LISTING){
         if (DataManager.isDataLoaded.value) {
-
             QuoteListScreen(quteList = DataManager.quoteList) {
                 DataManager.switchPages(it)
-                Log.d("TAGApp", "App: $it")
             }
         } else {
             Box(

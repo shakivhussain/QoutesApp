@@ -16,7 +16,6 @@ import com.shakiv.husain.qoutesapp.model.Quote
 
 @Composable
 fun QuoteListScreen(quteList: Array<Quote>, onClick: (quote: Quote) -> Unit) {
-
     Column {
         Text(
             text = "Quote Application",

@@ -25,8 +25,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
-import com.shakiv.husain.qoutesapp.R
 import com.shakiv.husain.qoutesapp.DataManager
+import com.shakiv.husain.qoutesapp.R
 import com.shakiv.husain.qoutesapp.model.Quote
 
 
@@ -81,9 +81,7 @@ fun QuoteDetails(quote: Quote) {
                     fontFamily = FontFamily(Font(R.font.regular)),
                     style = MaterialTheme.typography.bodySmall
                 )
-
             }
-
         }
     }
 }
